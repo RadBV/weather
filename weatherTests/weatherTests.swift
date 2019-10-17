@@ -11,7 +11,17 @@ import XCTest
 
 class weatherTests: XCTestCase {
     
-   
+   func testWeatherJSON() {
+       var data = Data()
+       guard let pathToData = Bundle.main.path(forResource: "weatherSample", ofType: "json") else { fatalError("Couldn't find json file") }
+       let url = URL(fileURLWithPath: pathToData)
+       do {
+           data = try Data(contentsOf: url)
+           XCTAssertTrue(data != nil)
+       } catch {
+           XCTFail(error.localizedDescription)
+       }
+   }
     
 
 }
