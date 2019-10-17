@@ -14,6 +14,7 @@
 		1D0F26E42358FD2E008283B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0F26E32358FD2E008283B6 /* Assets.xcassets */; };
 		1D0F26E72358FD2E008283B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0F26E52358FD2E008283B6 /* LaunchScreen.storyboard */; };
 		1D0F26F22358FD2E008283B6 /* weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F26F12358FD2E008283B6 /* weatherTests.swift */; };
+		1D0F2702235905F2008283B6 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F2701235905F2008283B6 /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1D0F26ED2358FD2E008283B6 /* weatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0F26F12358FD2E008283B6 /* weatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherTests.swift; sourceTree = "<group>"; };
 		1D0F26F32358FD2E008283B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D0F2701235905F2008283B6 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1D0F26E02358FD27008283B6 /* Main.storyboard */,
+				1D0F2701235905F2008283B6 /* WeatherCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0F2702235905F2008283B6 /* WeatherCell.swift in Sources */,
 				1D0F26DF2358FD27008283B6 /* ViewController.swift in Sources */,
 				1D0F26DB2358FD27008283B6 /* AppDelegate.swift in Sources */,
 				1D0F26DD2358FD27008283B6 /* SceneDelegate.swift in Sources */,
