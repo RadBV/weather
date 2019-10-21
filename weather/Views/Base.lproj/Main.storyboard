@@ -105,6 +105,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="7KF-vA-up9" id="PI0-PN-YEX"/>
+                        <outlet property="weatherCollectionView" destination="U6x-Do-2ML" id="uyT-zf-zYs"/>
+                        <outlet property="zipcodeTextField" destination="gAq-U2-Bk9" id="WBw-F1-pjB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

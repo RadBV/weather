@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: -- Outlets
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var weatherCollectionView: UICollectionView!
+    @IBOutlet weak var zipcodeTextField: UITextField!
+    
+    //MARK: -- Properties
+    
+    
+    //MARK: -- Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
