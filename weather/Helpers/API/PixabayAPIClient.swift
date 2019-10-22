@@ -1,20 +1,20 @@
 //
-//  WeatherAPIClient.swift
+//  PixabayAPIClient.swift
 //  weather
 //
-//  Created by Radharani Ribas-Valongo on 10/21/19.
+//  Created by Radharani Ribas-Valongo on 10/22/19.
 //  Copyright © 2019 Radharani Ribas-Valongo. All rights reserved.
 //
 
 import Foundation
 
-class WeatherAPIClient {
+class PixabayAPIClient {
     private init() {}
-    static let shared = WeatherAPIClient()
+    static let shared = PixabayAPIClient()
     
-    func getWeather(zipcode: Int, completionHandler: @escaping (Result<[Weather],ErrorHandling>) -> Void ) {
+    func getWeather(completionHandler: @escaping (Result<[Pixabay],ErrorHandling>) -> Void ) {
         
-        let urlStr = "" // insert Dark Skys url
+        let urlStr = "" // insert Pixabay url
         
         NetworkManager.shared.fetchData(urlStr: urlStr) { (result) in
             switch result {
@@ -22,7 +22,7 @@ class WeatherAPIClient {
                 completionHandler(.failure(appError))
             case .success(let data):
                 do {
-                    let WeatherData = try JSONDecoder().decode([Weather].self, from: data)
+                    let WeatherData = try JSONDecoder().decode([Pixabay].self, from: data)
                     completionHandler(.success(WeatherData))
                 } catch {
                     completionHandler(.failure(ErrorHandling.decodingError))

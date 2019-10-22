@@ -12,11 +12,11 @@ import Foundation
 struct FavesPersistenceHelper {
     static let manager = FavesPersistenceHelper()
     
-    func save(newJournal: PhotoJournal) throws {
+    func save(newJournal: Pixabay) throws {
         try persistenceHelper.save(newElement: newJournal)
     }
     
-    func getFaves() throws -> [PhotoJournal] {
+    func getFaves() throws -> [Pixabay] {
         return try persistenceHelper.getObjects()
     }
     
@@ -29,7 +29,7 @@ struct FavesPersistenceHelper {
         }
     }
     
-    private let persistenceHelper = PersistenceHelper<PhotoJournal>(fileName: "PhotoJournal.plist")
+    private let persistenceHelper = PersistenceHelper<Pixabay>(fileName: "Pixabay.plist")
     
     private init() {}
 }

@@ -22,6 +22,8 @@
 		1DFEF952235DDDFE00A19D56 /* FavesPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEF951235DDDFE00A19D56 /* FavesPersistence.swift */; };
 		1DFEF954235DE2DD00A19D56 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEF953235DE2DD00A19D56 /* Weather.swift */; };
 		1DFEF956235DF67300A19D56 /* ZipcodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEF955235DF67300A19D56 /* ZipcodeHelper.swift */; };
+		1DFEF9A8235E5EBE00A19D56 /* Pixabay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEF9A7235E5EBE00A19D56 /* Pixabay.swift */; };
+		1DFEF9AA235F30AD00A19D56 /* PixabayAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEF9A9235F30AC00A19D56 /* PixabayAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		1DFEF951235DDDFE00A19D56 /* FavesPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesPersistence.swift; sourceTree = "<group>"; };
 		1DFEF953235DE2DD00A19D56 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		1DFEF955235DF67300A19D56 /* ZipcodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipcodeHelper.swift; sourceTree = "<group>"; };
+		1DFEF9A7235E5EBE00A19D56 /* Pixabay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixabay.swift; sourceTree = "<group>"; };
+		1DFEF9A9235F30AC00A19D56 /* PixabayAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				1DFEF953235DE2DD00A19D56 /* Weather.swift */,
+				1DFEF9A7235E5EBE00A19D56 /* Pixabay.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,9 +176,10 @@
 		1DFEF948235DDD5400A19D56 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				1DFEF94D235DDDE000A19D56 /* ErrorHandling.swift */,
-				1DFEF949235DDD7700A19D56 /* NetworkHelper.swift */,
+				1DFEF9A9235F30AC00A19D56 /* PixabayAPIClient.swift */,
 				1DFEF94B235DDD9700A19D56 /* WeatherAPIClient.swift */,
+				1DFEF949235DDD7700A19D56 /* NetworkHelper.swift */,
+				1DFEF94D235DDDE000A19D56 /* ErrorHandling.swift */,
 				1DFEF955235DF67300A19D56 /* ZipcodeHelper.swift */,
 			);
 			path = API;
@@ -282,6 +288,7 @@
 			files = (
 				1DFEF94C235DDD9700A19D56 /* WeatherAPIClient.swift in Sources */,
 				1DFEF952235DDDFE00A19D56 /* FavesPersistence.swift in Sources */,
+				1DFEF9A8235E5EBE00A19D56 /* Pixabay.swift in Sources */,
 				1DFEF956235DF67300A19D56 /* ZipcodeHelper.swift in Sources */,
 				1D0F2702235905F2008283B6 /* WeatherCell.swift in Sources */,
 				1DFEF94E235DDDE000A19D56 /* ErrorHandling.swift in Sources */,
@@ -291,6 +298,7 @@
 				1D0F26DB2358FD27008283B6 /* AppDelegate.swift in Sources */,
 				1D0F26DD2358FD27008283B6 /* SceneDelegate.swift in Sources */,
 				1DFEF950235DDDF000A19D56 /* PersistenceHelper.swift in Sources */,
+				1DFEF9AA235F30AD00A19D56 /* PixabayAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
