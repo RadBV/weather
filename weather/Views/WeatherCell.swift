@@ -17,4 +17,12 @@ class WeatherCell: UICollectionViewCell {
     @IBOutlet weak var loTemp: UILabel!
     
     //MARK: -- Functions
+    
+    func configureCell(thing: Weather) {
+        self.dateLabel.text = thing.date
+        self.hiTemp.text = thing.temperatureHigh.description
+        self.loTemp.text = thing.temperatureLow.description
+        
+    }
+    
 }

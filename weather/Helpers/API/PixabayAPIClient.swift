@@ -12,9 +12,9 @@ class PixabayAPIClient {
     private init() {}
     static let shared = PixabayAPIClient()
     
-    func getWeather(completionHandler: @escaping (Result<[Pixabay],ErrorHandling>) -> Void ) {
+    func getWeather(cityName: String, completionHandler: @escaping (Result<[Pixabay],ErrorHandling>) -> Void ) {
         
-        let urlStr = "" // insert Pixabay url
+        let urlStr = " https://pixabay.com/api/?key=\(Secrets.pixabayAPIKey)&q=\(cityName.replacingOccurrences(of: " ", with: "+"))&image_type=photo"
         
         NetworkManager.shared.fetchData(urlStr: urlStr) { (result) in
             switch result {

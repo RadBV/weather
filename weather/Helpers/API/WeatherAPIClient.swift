@@ -8,24 +8,23 @@
 
 import Foundation
 
-class WeatherAPIClient {
+class WeatherAPIHelper {
     private init() {}
-    static let shared = WeatherAPIClient()
-    
-    func getWeather(zipcode: Int, completionHandler: @escaping (Result<[Weather],ErrorHandling>) -> Void ) {
+    static let manager = WeatherAPIHelper()
+    func getDailyWeather(info: (lat:Double,long:Double),completionHandler: @escaping (Result<[Weather],ErrorHandling>) -> ()) {
         
-        let urlStr = "" // insert Dark Skys url
+        let urlString = "https://api.darksky.net/forecast/69003be1dadffd2f9a53730f99ddc76a/\(String(info.lat)),\(String(info.long))"
         
-        NetworkManager.shared.fetchData(urlStr: urlStr) { (result) in
+        NetworkManager.shared.fetchData(urlStr: urlString) { (result) in
             switch result {
-            case .failure(let appError):
-                completionHandler(.failure(appError))
+            case .failure(let error):
+                completionHandler(.failure(error))
             case .success(let data):
                 do {
-                    let WeatherData = try JSONDecoder().decode([Weather].self, from: data)
-                    completionHandler(.success(WeatherData))
+                    let weather = try JSONDecoder().decode(WeatherWrapper.self, from: data)
+                    completionHandler(.success(weather.daily.data))
                 } catch {
-                    completionHandler(.failure(ErrorHandling.decodingError))
+                    completionHandler(.failure(.decodingError))
                 }
             }
         }
